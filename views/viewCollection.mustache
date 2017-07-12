@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>View Your Collection of Planets</title>
+  </head>
+  <body>
+    <h1>Here you can view your collection of planets</h1>
+    <ul>
+      {{#planets}}
+        <li>Planet: {{name}}, Planet Orbit Size: {{orbit}}, Planet Size: {{size}}
+          <form action="/edit/{{id}}" method="post">
+            <input type="submit" value="edit">
+          </form>
+          <form action="/delete/{{id}}" method="post">
+            <input type="submit" value="delete">
+          </form>
+        </li>
+      {{/planets}}
+    </ul>
+  </body>
+</html>

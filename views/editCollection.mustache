@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Editing Your Collection of Planets</title>
+  </head>
+  <body>
+    <h1>Here you can edit a planet in your collection</h1>
+    <form action="/editing/{{#parameters}}{{id}}{{/parameters}}" method="post">
+      <input type="text" placeholder="planet name" name="newPlanetName">
+      <input type="text" placeholder="orbit size" name="newOrbit">
+      <input type="text" placeholder="planet size" name="newPlanetSize">
+      <input type="submit" value="edit planet!">
+    </form>
+  </body>
+</html>
